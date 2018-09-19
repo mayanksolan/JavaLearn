@@ -14,7 +14,7 @@ public class Part4 {
 	    	if (ytind != -1)
 	    	{
 	    		int dqfirst = line.lastIndexOf("\"",ytind);
-	    		int dqsecond = line.indexOf("\"",ytind);
+	    		int dqsecond = line.indexOf("\"",ytind+1);
 	    		if(dqfirst != -1 && dqsecond != -1)
 	    			System.out.println("URL is " + line.substring(dqfirst+1, dqsecond));
 	    	}
