@@ -55,7 +55,8 @@ public class Part1 {
 		System.out.println("DNA String - " + a4 + " results into " + findGene(a4));
 		System.out.println("DNA String - " + a5 + " results into " + findGene(a5));
 		System.out.println("DNA String - " + a6 + " results into " + findGene(a6));*/
-		printAllGenes(a7);
+		//printAllGenes(a7);
+		cgRatio(a7);
 	}
 	public static void printAllGenes(String dna)
 	{
@@ -72,6 +73,17 @@ public class Part1 {
 			}
 		}				
 	}
+	public static float cgRatio(String dna)
+    {
+        int dnaLen = dna.length();
+        int countCG = 0;
+        for(int a = 0; a<dnaLen; a++)
+        {
+            if(dna.charAt(a) == 'C' ||  dna.charAt(a) == 'G')
+            countCG++;
+        }
+        return (float)dnaLen/countCG;
+    }
 	public static void main(String[] args)
 	{
 		testFindStopCodon();
